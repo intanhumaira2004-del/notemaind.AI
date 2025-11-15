@@ -1,5 +1,5 @@
 streamlit>=1.15
-ultralytics>=8.0.0
-pypdf>=6.0.0
-python-docx>=0.8.11
-python==3.11
+pandas>=1.5
+openpyxl>=3.1
+
+

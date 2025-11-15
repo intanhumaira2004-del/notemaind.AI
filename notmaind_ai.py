@@ -11,10 +11,10 @@ st.write("Selamat datang di NoteMind AI!")
 # Input materi catatan
 user_input = st.text_area("Masukkan materi catatanmu:")
 if st.button("Generate Note"):
-    # Simulasi ringkasan
-    st.write(user_input[:100] + "...")
-    # Simpan ke Excel
+    st.write(user_input[:100] + "...")  # Simulasi ringkasan
+    # Tambahkan ke notes.xlsx
     new_note = pd.DataFrame([[len(notes_df)+1, "Catatan Baru", user_input[:100]+"..."]],
                             columns=["id","judul","isi"])
     notes_df = pd.concat([notes_df, new_note], ignore_index=True)
     notes_df.to_excel("notes.xlsx", index=False)
+
